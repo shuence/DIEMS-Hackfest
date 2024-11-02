@@ -1,0 +1,313 @@
+@font-face {
+    font-family: 'OffBit';
+    src: url('/fonts/OffBit-DotBold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins';
+    background-image: url('images/Background.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    backdrop-filter: blur(20px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    justify-content: space-between; /* Ensures even spacing */
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navbar img {
+    width: 278px;
+    height: 57px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 18px;
+    font-family: 'Poppins';
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+    color: #ffffff;
+    font-weight: 900;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.8);
+    border-bottom: 3px solid #ffffff;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row; /* Keep logo and hamburger in a row */
+        justify-content: space-between;
+    }
+
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background-color: #041133;
+        backdrop-filter: blur(20px);
+        width: 100%;
+        top: 100px;
+        left: 0;
+        padding: 10px 0;
+    }
+
+    .navbar ul.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hero {
+        min-height: calc(80vh - 100px);
+    }
+
+    .main-title {
+        font-size: 2.5rem;
+    }
+
+    /* Hide vertical lines and show horizontal line */
+    .vertical-line {
+        display: none; /* Hide vertical lines */
+    }
+
+    .sponsor-hr {
+        border: 0;
+        border-top: 0.5px solid #ffffff; /* Horizontal line for mobile */
+        margin: 1rem 0;
+        opacity: 0.5;
+    }
+
+    /* Position logos directly below the text */
+    .sponsor-section {
+        display: flex;
+        flex-direction: column; /* Stack text and logos vertically */
+        align-items: center; /* Center align everything */
+        text-align: center; /* Center text */
+        margin: 2rem 0; /* Add some vertical spacing */
+    }
+
+    .sponsor-text {
+        font-size: 1.5rem;
+        margin-bottom: 1rem; /* Add space between text and logos */
+    }
+
+    /* Show sponsor images 2 by 2 */
+    .sponsor-logos {
+        display: flex;
+        flex-wrap: wrap; /* Allows logos to wrap */
+        justify-content: center; /* Center logos */
+        gap: 1rem; /* Space between logos */
+    }
+
+    .sponsor-logos img {
+        width: 45%; /* Adjust width to fit two images per row */
+        min-width: 100px; /* Minimum width for images */
+        max-width: 150px; /* Set max width for images */
+        height: auto;
+    }
+}
+
+.hero {
+    color: white;
+    min-height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero-content {
+    z-index: 1;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.8);
+}
+
+.main-title {
+    font-size: 6rem;
+    font-weight: 900;
+    margin: 1rem 0;
+    font-family: 'OffBit';
+}
+
+.date {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.8);
+}
+
+.sponsor-hr {
+    border: 0;
+    border-top: 0.5px solid #ffffff;
+    margin-top: 1rem;
+    opacity: 0.5;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    margin: 0 1rem;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.countdown {
+    margin: 2rem 0;
+}
+
+.countdown-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.8);
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+}
+
+.time {
+    margin: 0 1rem;
+    text-align: center;
+}
+
+.number {
+    font-size: 4rem;
+    font-weight: 900;
+    font-family: 'OffBit';
+}
+
+.label {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.register-button {
+    width: 264px;
+    height: 64px;
+    background: white;
+    border-radius: 24px;
+    color: #04176D;
+    font-size: 24px;
+    font-weight: 900;
+    text-transform: uppercase;
+    word-wrap: break-word;
+    border: none;
+    cursor: pointer;
+
+    transition: transform 0.2s;
+}
+
+.register-button:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 360px) {
+    header {
+        height: 80px; /* Reduce header height for smaller screens */
+        padding: 0 10px; /* Reduce padding */
+    }
+
+    .navbar img {
+        width: 200px; /* Adjust logo size */
+        height: auto;
+    }
+
+    .navbar ul {
+        flex-direction: column; /* Stack menu items vertically */
+        background: rgba(255, 255, 255, 0.9);
+        width: 100%;
+        padding: 10px 0;
+        position: absolute;
+        top: 80px; /* Align below the header */
+    }
+
+    .navbar ul.show {
+        display: flex; /* Show menu items when hamburger is clicked */
+    }
+
+    .sponsor-section {
+        margin: 1rem 0; /* Adjust vertical spacing for sponsor section */
+        padding: 0 10px; /* Add padding for small screens */
+    }
+
+    .sponsor-text {
+        font-size: 1.2rem; /* Smaller font size for text */
+        margin-bottom: 0.5rem; /* Reduce space below text */
+    }
+
+    .sponsor-logos img {
+        width: 90%; /* Use more of the available width */
+        max-width: 120px; /* Limit max width for very small devices */
+        margin: 0.5rem 0; /* Space between logos */
+    }
+
+    .sponsor-hr {
+        margin: 0.5rem 0; /* Reduce margin for horizontal line */
+    }
+
+    .countdown-title {
+        font-size: 1.2rem; /* Smaller font for countdown title */
+    }
+
+    .register-button {
+        width: 100%; /* Full width for register button */
+        font-size: 20px; /* Adjust font size */
+    }
+}
