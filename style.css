@@ -33,7 +33,8 @@ header {
 }
 
 .navbar img {
-  width: 200px;
+  width: 300px;
+  margin: 1rem;
   height: auto;
 }
 
@@ -79,9 +80,22 @@ header {
   transition: 0.3s;
 }
 
+/* Cross icon styles */
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
 .hero {
   color: white;
-  min-height: calc(100vh - 100px);
+  min-height: calc(100vh - 200px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -161,7 +175,6 @@ header {
 .timer {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
 }
 
 .time {
@@ -183,8 +196,8 @@ header {
 .register-button {
   width: 200px;
   height: 50px;
-  background: linear-gradient(98deg, #17ffd2, #458eff);
-  color: #000;
+  background: white;
+  color: rgb(4, 23, 109);
   font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -203,11 +216,18 @@ header {
     display: none;
     flex-direction: column;
     position: absolute;
-    background: rgba(255, 255, 255, 0.9);
+    background:#0A163F;
+    opacity: 0.9;
+    margin-top: auto;
     width: 100%;
-    top: 100px;
+    top: 70px;
     left: 0;
     padding: 10px 0;
+  }
+
+  .navbar ul li {
+    margin: 10px 0;
+    padding: 0 20px;
   }
 
   .navbar ul.show {
